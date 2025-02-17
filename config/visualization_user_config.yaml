@@ -1,0 +1,29 @@
+#CommonConfig
+tgt_pcd_path: /home/rm/pcl_registration_visualizer/src/pcl_registration_visualizer/pcd/pcl_tgt.pcd
+src_pcd_path: /home/rm/pcl_registration_visualizer/src/pcl_registration_visualizer/pcd/pcl_src.pcd
+no_priori_pcd: true # do not use priori .pcd in the pcd folder, default: true
+keypoint_mode: false #get keypoint if the number of point is too large, default: false
+max_iter_time: 20 # max iteration time, you MUST set this value if you want to visualize
+
+#UserConfig/generate_pcd
+generate_pcd: # ONLY works when no_priori_pcd is true
+  point_num: 10000
+  rotation:
+    deg: 20.0 #degree
+    axis: "x"
+  translation:
+    x: 300.0
+    y: 300.0
+    z: 300.0
+
+#VisualizerConfig
+window_width: 1280
+window_height: 720
+
+#getKeypoint
+neighbor_num: 10
+step_size: 10
+curvature_threshold: 0.10 #we need corner point here
+
+#hasConverged
+min_singular_threshold: 1e-5

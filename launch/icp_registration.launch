@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="pcl_registration_visualizer" type="icp_pcl_node" name="icp_pcl_node" output="screen">
+        <rosparam command="load" file="$(find pcl_registration_visualizer)/config/visualization_user_config.yaml"/>
+    </node>
+</launch>
