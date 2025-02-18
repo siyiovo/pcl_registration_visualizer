@@ -1,8 +1,6 @@
 # pcl_registration_visualizer
 
-
-
-![](assets\visualization.png)
+![image](https://github.com/siyiovo/pcl_registration_visualizer/blob/main/assets/visualization.png)
 
 ## Installation
 
