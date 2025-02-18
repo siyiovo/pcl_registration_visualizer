@@ -19,7 +19,7 @@ git clone https://github.com/siyiovo/pcl_registration_visualizer.git
 catkin build
 ```
 
-please use your own workspace instead of $YOUR_OWN_WORKSPACE$.
+please use your own workspace instead of YOUR_OWN_WORKSPACE.
 
 ### Using 
 
