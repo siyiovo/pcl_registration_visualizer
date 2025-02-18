@@ -39,7 +39,7 @@ some key parameters explanation here:
 
 `/no_priori_pcd`
 
-do not use priori pcd file in folder `pcd/`, and generate a random pointcloud. default:` true`
+do not use priori pcd file in folder `pcd/`, and generate a random pointcloud. default: ` true`
 
 `/keypoint_mode`
 
@@ -47,17 +47,17 @@ if the number of points > 30000, it will getKeypoint and visualize. default: `fa
 
 `/max_iter_time `
 
-maximum iteration time, which also the time you press `n`. default:` 20`
+maximum iteration time, which also the time you press `n`. default: ` 20`
 
 `/getKeypoint/neighbor_num `
 
 the number of nearest points. default: `10 `
 
-`getKeypoint/curvature_threshold`
+`/getKeypoint/curvature_threshold`
 
 the threshold of curvature, here we get points that high curvature, which aslo the corner point. default: `0.10 `
 
-`hasConverged/min_singular_threshold`
+`/hasConverged/min_singular_threshold`
 
 the threshold of minimum singular value. default: `1e-5`
 
