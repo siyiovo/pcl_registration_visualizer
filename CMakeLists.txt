@@ -39,7 +39,19 @@ add_executable(icp_pcl_node
   src/pointcloud_matching_visualizer.cpp  
 )
 
-target_link_libraries(icp_pcl_node
+add_executable(ransac_icp_pcl_node 
+  src/example/ransac_icp_registration_pcl.cpp 
+  src/pointcloud_matching_visualizer.cpp  
+)
+
+target_link_libraries(icp_pcl_node 
+  ${catkin_LIBRARIES}
+  ${EIGEN3_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${OpenMP_CXX_FLAGS}
+)
+
+target_link_libraries(ransac_icp_pcl_node  
   ${catkin_LIBRARIES}
   ${EIGEN3_LIBRARIES}
   ${PCL_LIBRARIES}
