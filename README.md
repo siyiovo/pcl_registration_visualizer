@@ -6,10 +6,9 @@
 
 ### Dependencies
 
-> 1. CMake >= 3.0.2
-> 2. Eigen3 >= 3.4
-> 3. PCL >= 1.10
-> 4. [KISS_Matcher](https://github.com/MIT-SPARK/KISS-Matcher) (Optional, TBD)
+> 1. CMake >= 3.10.0
+> 2. Eigen >= 3.3.7
+> 3. PCL >= 1.9 
 
 ### Compilation
 
@@ -23,7 +22,7 @@ please use your own workspace instead of YOUR_OWN_WORKSPACE.
 
 ### Using 
 
-I code an example which use pcl::IterativeClosestPoint as pointcloud registration algorithm, you can run it by:
+I code an example which use pcl::IterativeClosestPoint as point cloud registration algorithm, you can run it by:
 
 ```
 cd $YOUR_OWN_WORKSPACE$
@@ -31,7 +30,7 @@ source ./devel/setup.bash
 roslaunch pcl_registration_visualizer icp_registration.launch
 ```
 
-**NOTE: **you can press `n` to get next iteration result on visualizer.
+**NOTE: ** you can press `n` to get next iteration result on visualizer.
 
 ### Parameters
 
@@ -39,11 +38,11 @@ some key parameters explanation here:
 
 `/no_priori_pcd`
 
-do not use priori pcd file in folder `pcd/`, and generate a random pointcloud. default: `true`
+do not use priori pcd file in folder `pcd/`, and generate a random point cloud. default: `true`
 
 `/keypoint_mode`
 
-if the number of points > `30000`, it will getKeypoint and visualize. default: `false`
+if the number of points > `30000`, it will get key point and visualize. default: `false`
 
 `/max_iter_time`
 
@@ -55,7 +54,7 @@ the number of nearest points. default: `10`
 
 `/getKeypoint/curvature_threshold`
 
-the threshold of curvature, here we get points that high curvature, which aslo the corner point. default: `0.10`
+the threshold of curvature, here we get points that high curvature, which also the corner point. default: `0.10`
 
 `/hasConverged/min_singular_threshold`
 
@@ -63,10 +62,9 @@ the threshold of minimum singular value. default: `1e-5`
 
 ### TODO
 
-1. support [KISS_Matcher](https://github.com/MIT-SPARK/KISS-Matcher)
+1. optimize the code structure, especially put implement of the function to `impl` folder
+
+1. support [nano_gicp](https://github.com/engcang/nano_gicp) and [KISS_Matcher](https://github.com/MIT-SPARK/KISS-Matcher)
 2. support ROS2 port
-3. code an example of full pointcloud registration, which include coarse registration and fine registration
-4. overload the visualization method
-
-
+4. overload the visualization method, including support KITTI dataset
 
